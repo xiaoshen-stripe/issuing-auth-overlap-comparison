@@ -1910,11 +1910,14 @@
 
    
 <div id="container">
-   <h1>Overlap Comparison</h1>
+   <h1>Issuing authorizzation logic overlap analysis</h1>
+   <p> Demonstrates that the workaround to use MCC checks versus the unexposed transactions types (Cash/ATM) is generally adequate.</p>
+   <p>The authorizations identified as Cash/ATM transactions are a subset of the authorizations made with the MCC codes: 6011 6051 4829 7801 7995 6010 7802 </p>
+   <p> The MCC workaround will lead to less than 1% (0.978) of Cash or ATM transaction volume allowed.</p>
    <!-- <p>Venn Diagram created with Ben Federickson's "<a href="http://www.benfrederickson.com/better-venn-diagrams/">A Better Algorithm for Area Proportional Venn and Euler Diagrams</a>"</p> -->
 
     <div id="venn_one" style=float:left>    
-        <h3>https://hubble.corp.stripe.com/queries/xiaoshen/78e4e6a3</h3> 
+        <h3>https://hubble.corp.stripe.com/queries/xiaoshen/69480b16/table-raw</h3> 
     </div> 
   
 
@@ -1927,11 +1930,6 @@
 
 
     <script>
-        // var sets = [
-        //             {sets:["MCC"], figure: 30.54, label: "MCC", size: 30.54},
-        //             {sets: ["MCC", "ATM/Cash"], figure: 68.77, label: "Overlap", size: 68.77},
-        //             {sets:["ATM/Cash"], figure:0.68, label: "ATM/Cash", size: 0.68},
-        //             ];
 
         var sets = [
                     {sets:["MCC"], figure: 12679352058, label: "MCC", size: 12679352058},
@@ -1939,18 +1937,6 @@
                     {sets: ["MCC", "Cash/ATM"], figure: 	8783520981, label: "Overlap", size: 	8783520981},
 
                     ];
-
-
-                    // var sets = [
-                    // {sets:["Audio"], figure: 27.92, label: "Audio", size: 27.92},
-                    // {sets:["Direct Buy"], figure: 55.28, label: "Direct Buy", size: 55.28},
-                    // {sets:["Branded Takeover"], figure: 7.62, label: "Branded Takeover", size: 7.62},
-                    // {sets: ["Audio", "Direct Buy"], figure: 3.03, label: "Audio and Direct Buy", size: 3.03},
-                    // {sets: ["Audio", "Branded Takeover"], figure: 1.66, label: "Audio and Branded Takeover", size: 1.66},
-                    // {sets: ["Direct Buy", "Branded Takeover"], figure: 2.40, label: "Direct Buy and Branded Takeover", size: 2.40},
-                    // {sets: ["Audio", "Direct Buy", "Branded Takeover"], figure: 1.08, label: "Audio, Direct Buy, and Branded Takeover", size: 1.08} 
-                    // ];
-
 
 
         var chart = venn.VennDiagram()
